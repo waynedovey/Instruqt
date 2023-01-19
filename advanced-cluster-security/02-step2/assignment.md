@@ -112,7 +112,7 @@ oc login --token=superSecur3T0ken --server=http://${CLUSTER_NAME}:8001
 Install the RHACS service on Spoke1
 
 ```
-helm install -n stackrox --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services -f ${CLUSTER_NAME}_init_bundle.yaml --set clusterName=$CLUSTER_NAME --set centralEndpoint=$ROX_CENTRAL_ADDRESS:443 --set imagePullSecrets.allowNone=true --set env.offlineMode=true --set image.registry=quay.io/wdovey/advanced-cluster-security
+helm install -n stackrox --version 72.1.0 --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services -f ${CLUSTER_NAME}_init_bundle.yaml --set clusterName=$CLUSTER_NAME --set centralEndpoint=$ROX_CENTRAL_ADDRESS:443 --set imagePullSecrets.allowNone=true --set env.offlineMode=true --set image.registry=quay.io/wdovey/advanced-cluster-security
 ```
 
 Show the installed Pods
@@ -141,7 +141,7 @@ oc login --token=superSecur3T0ken --server=http://${CLUSTER_NAME}:8001
 Install the RHACS service on Spoke2
 
 ```
-helm install -n stackrox --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services -f ${CLUSTER_NAME}_init_bundle.yaml --set clusterName=$CLUSTER_NAME --set centralEndpoint=$ROX_CENTRAL_ADDRESS:443 --set imagePullSecrets.allowNone=true --set env.offlineMode=true --set image.registry=quay.io/wdovey/advanced-cluster-security
+helm install -n stackrox --version 72.1.0 --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services -f ${CLUSTER_NAME}_init_bundle.yaml --set clusterName=$CLUSTER_NAME --set centralEndpoint=$ROX_CENTRAL_ADDRESS:443 --set imagePullSecrets.allowNone=true --set env.offlineMode=true --set image.registry=quay.io/wdovey/advanced-cluster-security
 ```
 
 Show the installed Pods

@@ -11,6 +11,4 @@ tags: []
 owner: openshift
 developers:
 - wdovey@redhat.com
-private: true
-published: false
-checksum: "17998293018643402852"
+checksum: "8409651863617628923"
